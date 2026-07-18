@@ -3,35 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
+    <title>Mahak | Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header>
-    <div id="navbar">
-        <div id="logo">
-            <img src="logoo.png" alt="" height="100" width="100">
+    //navbar
+    <header id="navbar">
+        <div class="nav-container">
+            <div id="logo">
+                <img src="logoo.png" alt="Logo" class="logo-img">
+            </div>
+            <nav id="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <button class="btn btn-outline">Login</button>
+            </nav>
         </div>
-        <div id="links">
-            <a href="#home">Home</a>
-            <a href="#about">About me</a>
-            <button>Login</button>
-            <img src="viber.png" alt="" height="50" width="50">
-        </div>
-    </div>
- </header>
+    </header>
 
-     <div class="hero-section">
-       <div id="photo">
-         <img src="mahak.jpeg" alt="" height="350px">
-       </div>
-       <div id="content">
-        <h2> Mahak choursiya..🦋</h2>
-        <p>I'm someone who loves learning, exploring, and constantly improving. I enjoy solving problems <br> and diving deep into programming, especially in fronted tecnologies, because I believe <br> understanding the "why" behind the code is just as important as writing it. Challenges motivate me, <br> and I don't give up until I truly understand a concept. Alongside my technical side, I have <br> a creative streak and enjoy experimenting with fun ideas and digital content. <br> I'm always looking for opportunities to learn something new, sharpen my skills, and turn curiosity into knowledge. My goal is simple: keep growing, keep building, and become better every day.😊✨🎀</p>
-        <button>know more about me</button>
-        <button>Contact Me</button>
-    </div>
-       
-     </div>
+    //hero-section
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div id="content">
+                <p class="greeting">Hello, I am</p>
+                <h2 class="animated-text">Mahak Choursiya..🦋</h2>
+                <h3 class="role">Frontend Developer & Problem Solver</h3>
+                <p class="description">
+                    I'm someone who loves learning, exploring, and constantly improving. I enjoy solving problems and diving deep into programming, especially in frontend technologies, because I believe understanding the "why" behind the code is just as important as writing it. Challenges motivate me, and I don't give up until I truly understand a concept. 
+                    <br><br>
+                    Alongside my technical side, I have a creative streak and enjoy experimenting with fun ideas and digital content. My goal is simple: keep growing, keep building, and become better every day. 😊✨🎀
+                </p>
+                <div class="button-group">
+                    <button class="btn btn-primary">Know More</button>
+                    <button class="btn btn-secondary">Contact Me</button>
+                </div>
+            </div>
+            
+            <div id="photo">
+                <div class="image-wrapper">
+                    <img src="mahak.jpeg" alt="Mahak Choursiya">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    //skill-section
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My Arsenal</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Web Design</div>
+        </div>
+    </section>
 </body>
 </html>
