@@ -58,5 +58,43 @@
             <div class="skill-card">Web Design</div>
         </div>
     </section>
+    
+
+    
+    <script>
+        const tiltBox = document.querySelector('.image-wrapper');
+
+        tiltBox.addEventListener('mousemove', (e) => {
+            // Remove the reset class so it tracks instantly
+            tiltBox.classList.remove('reset');
+
+            // Get the dimensions and position of the image wrapper
+            const rect = tiltBox.getBoundingClientRect();
+            
+            // Calculate where the mouse is relative to the center of the box
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            // Calculate the rotation (Max 15 degrees)
+            // We flip the signs so it tilts *towards* the mouse
+            const rotateX = ((y - centerY) / centerY) * -15; 
+            const rotateY = ((x - centerX) / centerX) * 15;
+
+            // Apply the 3D transform
+            tiltBox.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+        });
+
+        // When the mouse leaves, snap it back to normal
+        tiltBox.addEventListener('mouseleave', () => {
+            tiltBox.classList.add('reset');
+            // Reset to 0 degrees and normal size
+            tiltBox.style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
