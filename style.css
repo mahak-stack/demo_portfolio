@@ -1,7 +1,7 @@
 /* CSS Variables for Theme*/
 :root {
-    --bg-color: white;
-    --text-primary: #ffffff;
+    --bg-color: #ffffff;
+    --text-primary: #000000;
     --text-secondary: #a0aabf;
     --accent-color: #ff2a6d; /* Neon pink */
     --accent-glow: rgba(255, 42, 109, 0.6);
